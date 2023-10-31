@@ -1,6 +1,6 @@
 {% extends 'info/base.html' %}
 {% block content %}
-    <h1>List of Classes</h1>
+    <h1>Classes handled</h1>
     <div class="card mb-3">
             <div class="card-body">
               <div class="table-responsive">
@@ -19,15 +19,15 @@
                         <td>{{ ass.course }}</td>
                         <td>
                             {% if choice == 1 %}
-                                <a class="btn btn-primary" href="{% url 't_class_date' ass.id %}" role="button">Enter Attendance</a>
-                                <a class="btn btn-warning" href="{% url 't_extra_class' ass.id %}">Extra Class</a>
-                                <a class="btn btn-danger" href="{% url 't_student' ass.id %}">View Students</a>
+                                <a class="btn" href="{% url 't_class_date' ass.id %}" role="button">Enter Attendance</a>
+                                <a class="btn" href="{% url 't_extra_class' ass.id %}">Extra Class</a>
+                                <a class="btn" href="{% url 't_student' ass.id %}">View Students</a>
 
                             {% elif choice == 2 %}
-                                <a class="btn btn-primary" href="{% url 't_marks_list' ass.id %}" role="button">Enter Marks</a>
-                                <a class="btn btn-danger" href="{% url 't_student_marks' ass.id %}">View Students</a>
+                                <a class="btn" href="{% url 't_marks_list' ass.id %}" role="button">Enter Marks</a>
+                                <a class="btn" href="{% url 't_student_marks' ass.id %}">View Students</a>
                             {% elif choice == 3 %}
-                                <a class="btn btn-danger" href="{% url 't_report' ass.id %}">Generate reports</a>
+                                <a class="btn" href="{% url 't_report' ass.id %}">Generate reports</a>
                             {% endif %}
 
                         </td>

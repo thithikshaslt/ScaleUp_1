@@ -34,9 +34,9 @@
 
   <body id="page-top">
 
-    <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
+    <nav class="navbar navbar-expand static-top" style="background-color:#4682B4">
 
-      <a class="navbar-brand mr-1" href="{% url 'index' %}">CollegeERP</a>
+      <a class="navbar-brand mr-1" href="{% url 'index' %}" style="color: #ffffff">ScaleUp</a>
 
       <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
         <i class="fas fa-bars"></i>
@@ -47,13 +47,13 @@
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
                 {% if request.user.is_student %}
-                    <a class="nav-link text-capitalize">{{ request.user.student.name }}</a>
+                    <a class="nav-link text-capitalize" style="color: #ffffff" >{{ request.user.student.name }}</a>
                 {% elif request.user.is_teacher %}
-                    <a class="nav-link text-capitalize">{{ request.user.teacher.name }}</a>
+                    <a class="nav-link text-capitalize" style="color: #ffffff">{{ request.user.teacher.name }}</a>
                 {% endif %}
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#" data-toggle="modal" data-target="#logoutModal">Logout</a>
+                <a class="nav-link" href="#" data-toggle="modal" data-target="#logoutModal" style="color: #ffffff">Logout</a>
             </li>
           </ul>
         </div>
@@ -63,7 +63,7 @@
     <div id="wrapper">
 
       <!-- Sidebar -->
-      <ul class="sidebar navbar-nav">
+      <ul class="sidebar navbar-nav"- style="background-color: #2C3F63;">
             <li class="nav-item">
               <a class="nav-link" href="{% url 'index' %}">
                 <span>Home</span>
